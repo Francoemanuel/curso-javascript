@@ -6,14 +6,7 @@
     float: none;
     clear: both;
 }
-body{
-    background: url('../img/hojas.jpg');
-    /* background-attachment: fixed lo uso para 
-    determina si la posición de la imagen de fondo será fija dentro de la pantalla 
-    o se desplazará con su bloque contenedor
-    */
-    background-attachment: fixed;
-}
+
 #global{
     width: 65%;
     margin: 0px auto;
@@ -28,7 +21,6 @@ body{
     font-size: 30px;
     letter-spacing: 4px;
     line-height: 75px;
-    background: #235E30;
     color: white;
     text-align: center;
     width: 389px;
@@ -53,9 +45,7 @@ body{
     transition: all 300ms;
 }
 
-#menu ul li:hover{
-    background: #235E30;
-}
+
 
 #menu a{
     display: block;
@@ -94,7 +84,6 @@ body{
     text-align: center;
     display: block;
     padding: 15px;
-    background: #235E30;
     color: white;
     text-decoration: none;
     margin-top: 10px;
@@ -161,4 +150,37 @@ footer{
     padding-right: 20px;
     margin-top: 50px;
     line-height: 47px;
+}
+
+.bx-weapper, .bx-viewport {
+    height: 250px !important;
+}
+
+#selector-theme{
+    position: fixed;
+    top: 40%;
+    background: rgba(51, 51, 51, 0.50);
+    width: 50px;
+    height: 100px;
+}
+#to-green,
+#to-red,
+#to-blue{
+    width: 25px;
+    height: 25px;
+    border: 1px solid white;
+    display: block;
+    margin: 0px auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+#to-green{
+    background: #235E30;
+}
+#to-red{
+    background: #CA3413;
+}
+#to-blue{
+    background: #1F87C4;
 }
