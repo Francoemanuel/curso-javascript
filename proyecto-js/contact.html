@@ -6,16 +6,16 @@
     <title>Proyecto con JavaScript</title>
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link id="theme" rel="stylesheet" type="text/css" href="css/green.css">
-    <!-- <link rel="stylesheet" type="text/css" href="css/blue.css"> -->
-    <!-- <link rel="stylesheet" type="text/css" href="css/red.css"> -->
+    
     <!-- jquery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <!-- Slider -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-    <!-- Moment -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.1/moment.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/locale/es.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.13.2/jquery-3.7.0.min.js"></script>
+    <link rel="stylesheet" href="js/jquery-ui-1.13.2/jquery-ui.min.css">
+    <link rel="stylesheet" href="js/jquery-ui-1.13.2/jquery-ui.structure.min.css">
+    <script type="text/javascript" src="js/jquery-ui-1.13.2/jquery-ui.theme.min.css"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.13.2/jquery-ui.min.js"></script>
+   
+    <!-- Plugin validacion -->
+    <script type="text/javaScript" src="js/jquery-ui-1.13.2/jquery-form-validator.min.js"></script>
     <!-- Mis scripts -->
     <script type="text/javaScript" src="js/main.js"></script>
 </head>
@@ -42,18 +42,36 @@
             </nav>
         </header>
 
-        <!-- Slider -->
-        <div id="slider">
-            <div class="bxslider">
-                <div><img src="img/hojas.jpg" title="Coffee 1" /></div>
-                <div><img src="img/rojo.jpg" title="Coffee 2" /></div>
-                <div><img src="img/cielo.jpg" title="Coffee 3" /></div>
-              </div>
-        </div>
         <!-- Contenido -->
         <section id="content">
-            <div id="posts">
-                <!-- Cargar los posts desde un json -->
+            <div id="box">
+                <!-- Cargar formulario -->
+                <h2>Contacto</h2>
+                <form action="#" method="POST" id="form_contact">
+                    <label for="name">Nombre</label>
+                    <input type="text" name="name" data-validation="alphanumeric" />
+
+                    <label for="surname">Apellido</label>
+                    <input type="text" name="surname" data-validation="alphanumeric" />
+
+                    <label for="email">Email</label>
+                    <input type="text" name="email"  data-validation="email"/>
+
+                    <label for="sex">Sexo</label>
+                    <select name="sex" data-validation="required">
+                        <option value="men">Hombre</option>
+                        <option value="woman">Mujer</option>
+                    </select>
+
+                    <label for="date">Fecha de nacimiento</label>
+                    <input type="text" name="date" data-validation="date"  data-validation-format="dd-mm-yyyy"/>
+
+                    <label for="years">Edad</label>
+                    <input type="number" name="years" data-validation="number"/>
+
+                    <input type="submit" value="Enviar"/>
+                </form>
+           
             </div>
             <aside id="sidebar">
                 <div id="about">
