@@ -1,0 +1,1 @@
+El comando tsc -w *.ts se utiliza para compilar archivos TypeScript de forma continua en un proyecto.
